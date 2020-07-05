@@ -9,26 +9,31 @@
     </head>
 
     <body>
-        <h1> 'N Choose K' Calculator </h1>
+        <h1> N Choose K Calculator </h1>
+        <h4> By Ben Highsted </h4>
 
         <hr/>
         
-        <br> <!-- These breaks are temporary; when I add style I aim to remove them all. -->
+        <br>
 
-        <form method="POST" action="/">
-            N: <input name="n_input" id="n_input">
-            <br>
-            <br>
-            K: <input name="k_input" id="k_input">
-            <br>
-            <br>
-            <input type="submit">
-        </form>
+        <div class="form-div">
+            <form method="POST" action="/">
+                <label for="n_input">N:</label>
+                <input name="n_input" id="n_input">
+
+                <br><br>
+
+                <label for="k_input">K:</label>
+                <input name="k_input" id="k_input">
+
+                <br><br>
+
+                <input type="submit" id="submit">
+            </form>
+        </div>
 
         <p> {{ users_numbers }} </p>
-        <p> {{ combinations }} </p>
-
-        <!-- <img src="{{ url_for('static', filename='images/image-name.png') }}" alt="My image"> -->
+    <u><p style='color: {{error_color}}'> {{ combinations }} </p></u>
 
     </body>
 

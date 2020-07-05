@@ -6,7 +6,7 @@ A project I created to learn the basics of [Flask](https://flask.palletsprojects
 
 There are a few installations required to run a Flask application.
 
-First make sure you have Python3 installed (https://www.python.org/downloads/)
+First make sure you have Python3 installed. You can download it from [here](https://www.python.org/downloads/)
 
 Next you will have to download a virtual enviroment to run the code on. Follow the installation instructions from [this](https://dev.to/sahilrajput/install-flask-and-create-your-first-web-application-2dba) page if you dont already have venv installed. 
 

@@ -15,12 +15,13 @@ def my_form_post():
 
     if n < k:
         combinations_string = "ERROR: N must be greater than K"
+        error_color = 'red'
     else:  
         combinations = nChooseK(n, k)
-        combinations = (int) combinations
-        combinations_string = "There are " + str(combinations) + "."
+        combinations_string = "There are " + str(combinations) + " combinations."
+        error_color = 'black'
 
-    return render_template("index.html", users_numbers = numbers_formatted, combinations = combinations_string)
+    return render_template("index.html", users_numbers = numbers_formatted, combinations = combinations_string, error_color = error_color)
 
 @app.route('/admin')
 def admin_message():
