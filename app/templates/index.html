@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="{{ url_for('static', filename='js/app.js') }}"></script>
 
-        <title> N Choose K </title>
+        <title> N Choose K</title>
     </head>
 
     <body>
@@ -13,18 +13,19 @@
         <h4> By Ben Highsted </h4>
 
         <hr/>
-        
-        <br>
+
+        <p> The 'N Choose K' formula calculates how many combinations there are of N in K amount. </p>
+        <p> For example, a deck of 52 cards, how many different possible poker hands (5 cards) are there? </p>
 
         <div class="form-div">
             <form method="POST" action="/">
-                <label for="n_input">N:</label>
-                <input name="n_input" id="n_input">
+                <label for="n_input"><b>N:</b></label>
+                <input name="n_input" id="n_input" placeholder="52">
 
                 <br><br>
 
-                <label for="k_input">K:</label>
-                <input name="k_input" id="k_input">
+                <label for="k_input"><b>K:</b></label>
+                <input name="k_input" id="k_input" placeholder="5">
 
                 <br><br>
 
@@ -33,8 +34,14 @@
         </div>
 
         <p> {{ users_numbers }} </p>
-    <u><p style='color: {{error_color}}'> {{ combinations }} </p></u>
+        <u><b><p style='color: {{error_color}}' id="combinations"> {{ combinations }} </p></b></u>
 
     </body>
+
+    <hr id="footer-line"/>
+
+    <footer>
+        This website was a personal project by Ben Highsted, designed as a way to learn the basics of Flask and Jinja2.
+    </footer>
 
 </html>

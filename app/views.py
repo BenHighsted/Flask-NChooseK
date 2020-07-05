@@ -8,8 +8,20 @@ def index():
 
 @app.route('/', methods=['POST'])
 def my_form_post():
-    n = (int) (request.form['n_input'])
-    k = (int) (request.form['k_input'])
+    n = request.form['n_input']
+    k = request.form['k_input']
+
+    if n == "" and k == "": # default values
+        n = "52"
+        k = "5"
+
+    if n.isdigit() == False or k.isdigit() == False: #checks if a user enters an invalid input
+        combinations_string = "ERROR: N and K must be Positive Integer values. N must be larger than K."
+        error_color = 'red'
+        return render_template("index.html", combinations = combinations_string, error_color = error_color)
+    else:
+        n = (int) (n)
+        k = (int) (k)
 
     numbers_formatted = "You entered N: " + str(n) + " and K: " + str(k)
 
