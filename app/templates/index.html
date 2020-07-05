@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+
+        <title> N Choose K </title>
+    </head>
+
+    <body>
+        <h1> 'N Choose K' Calculator </h1>
+
+        <hr/>
+        
+        <br> <!-- These breaks are temporary; when I add style I aim to remove them all. -->
+
+        <form method="POST" action="/">
+            N: <input name="n_input" id="n_input">
+            <br>
+            <br>
+            K: <input name="k_input" id="k_input">
+            <br>
+            <br>
+            <input type="submit">
+        </form>
+
+        <p> {{ users_numbers }} </p>
+        <p> {{ combinations }} </p>
+
+        <!-- <img src="{{ url_for('static', filename='images/image-name.png') }}" alt="My image"> -->
+
+    </body>
+
+</html>
